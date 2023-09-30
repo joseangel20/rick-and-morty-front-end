@@ -10,7 +10,7 @@ const Detail = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    axios(`/rickandmorty/character/${id}`)
+    axios(`/character/${id}`)
       .then(({ data }) => {
         if (data.name) {
           setCharacter(data);

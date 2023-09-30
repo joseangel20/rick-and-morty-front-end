@@ -43,7 +43,7 @@ const Favorites = () => {
   };
 
   useEffect(() => {
-    axios("/rickandmorty/fav").then(({ data }) => {
+    axios("/fav").then(({ data }) => {
       dispatch(getFavorites(data));
     });
   }, [dispatch]);
