@@ -28,13 +28,13 @@ function App() {
     const URL = "/login/";
 
     try {
-      const { data } = await axios(
+     /* const { data } = await axios(
         URL + `?email=${email}&password=${password}`
-      );
+      );*/
 
-      const { access } = data;
-      setAccess(access);
-      dispatch(loginRedux(data.token));
+      //const { access } = data;
+      setAccess(true);
+      //dispatch(loginRedux(data.token));
       access && navigate("/home");
       !access && alert("Usuario o password incorrecto");
     } catch (response) {
