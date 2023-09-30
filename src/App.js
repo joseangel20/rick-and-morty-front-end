@@ -8,6 +8,7 @@ import * as component from "./vista/view";
 import "./App.css";
 import axios from "axios";
 //axios.defaults.baseURL = "http://localhost:3001"
+
 axios.defaults.baseURL = "https://back-end-morty-pi.up.railway.app/rickandmorty"
 function App() {
   const [characters, setCharacters] = useState([]);
