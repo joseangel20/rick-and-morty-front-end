@@ -7,7 +7,8 @@ import { useDispatch } from "react-redux";
 import * as component from "./vista/view";
 import "./App.css";
 import axios from "axios";
-
+//axios.defaults.baseURL = "http://localhost:3001"
+axios.defaults.baseURL = "rick-and-morty-back-end-production.up.railway.app/rickandmorty"
 function App() {
   const [characters, setCharacters] = useState([]);
   const [access, setAccess] = useState(false);
@@ -24,7 +25,7 @@ function App() {
 
   async function login(userData, dispatch) {
     const { email, password } = userData;
-    const URL = "http://localhost:3001/rickandmorty/login/";
+    const URL = "/rickandmorty/login/";
 
     try {
       const { data } = await axios(

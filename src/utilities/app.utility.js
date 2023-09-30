@@ -24,7 +24,7 @@ export const onSearchRandom = (characters, setCharacters) => {
 const axio = async (setCharacters, id) => {
   try {
     const { data } = await axios(
-      `http://localhost:3001/rickandmorty/character/${id}`
+      `/rickandmorty/character/${id}`
     );
 
     if (data.name) {
