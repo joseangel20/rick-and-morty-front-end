@@ -33,10 +33,10 @@ function App() {
       );
 
       const { access } = data;
-      setAccess(true);
+      setAccess(access);
       dispatch(loginRedux(data.token));
-      true && navigate("/home");
-      !true && alert("Usuario o password incorrecto");
+      access && navigate("/home");
+      !access && alert("Usuario o password incorrecto");
     } catch (response) {
       //console.clear();
       console.log(response.message);
