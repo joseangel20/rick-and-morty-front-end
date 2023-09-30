@@ -25,7 +25,7 @@ function App() {
 
   async function login(userData, dispatch) {
     const { email, password } = userData;
-    const URL = "/rickandmorty/login/";
+    const URL = "/login/";
 
     try {
       const { data } = await axios(
